@@ -1,0 +1,23 @@
+import java.util.*;
+
+public class Solution {
+    public static List< Integer > stringMatch(String text, String pattern)
+    {
+        List<Integer> matches = new ArrayList<Integer>();
+        int textLength = text.length();
+        int patternLength = pattern.length();
+
+    for (int i = 0; i <= textLength - patternLength; i++) {
+        boolean match = true;
+        for (int j = 0; j < patternLength; j++) {
+            if (text.charAt(i + j) != pattern.charAt(j)) {
+                match = false;
+                break;
+            }
+        }
+        if (match) {
+            matches.add(i+1);
+        }
+    }
+   return matches;
+}
