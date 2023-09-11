@@ -1,0 +1,26 @@
+import java.util.* ;
+import java.io.*; 
+import java.util.ArrayList;
+
+public class Solution 
+{
+    int i;
+    public static int calculateSquare(int n) 
+    {
+        if(n==0)
+        {
+            return 0;
+        }
+        if (n < 0)
+            n = -n;
+ 
+        // Initialize result
+        int res = n;
+ 
+        // Add n to res n-1 times
+        for (int i = 1; i < n; i++)
+            res += n;
+ 
+        return res;
+    }
+}
