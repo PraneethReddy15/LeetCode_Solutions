@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+public class RevNum {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter the number:");
+        int num=sc.nextInt();
+        //logic 1-using algo
+
+        /*int rev=0;
+        while(num!=0)
+        {
+            rev=rev*10 +num%10;
+            num/=10;
+        }
+        System.out.println("Reverse number:"+rev);*/
+
+        //logic 2-using StringBuffer
+        StringBuffer sb=new StringBuffer(String.valueOf(num));
+        StringBuffer rev1=sb.reverse();
+         System.out.println("Reverse number:"+rev1);
+
+        // logic3-using StringBuilder
+        StringBuilder sb1=new StringBuilder();
+        sb1.append(num);
+        StringBuilder rev2=sb1.reverse();
+         System.out.println("Reverse number:"+rev2);
+    }
+}
