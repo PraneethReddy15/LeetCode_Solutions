@@ -1,0 +1,36 @@
+public class Swap{
+    
+    public static void main(String[] args) {
+        int a=10,b=20;
+        System.out.println("Before swaping:"+a+" "+b);
+        //logic1-using temp
+        // int temp;
+        // temp=a;
+        // a=b;
+        // b=temp;
+        // System.out.println("After swaping:"+a+" "+b);
+        
+
+        //logic2-using + and -
+        // a=a+b;
+        // b=a-b;
+        // a=a-b;
+        // System.out.println("After swaping:"+a+" "+b);
+
+        //logic 3-uisng * and /
+        // a=a*b;
+        // b=a/b;
+        // a=a/b;
+        // System.out.println("After swaping:"+a+" "+b);
+
+        // logic 4-using caret(^) e-XOR
+        // a=a^b;
+        // b=a^b;
+        // a=a^b;
+        // System.out.println("After swaping:"+a+" "+b);
+
+        //logic 5-single line
+        // b=a+b-(a=b);
+        // System.out.println("After swaping:"+a+" "+b);
+    }
+}
