@@ -34,3 +34,19 @@ public class Swap{
         // System.out.println("After swaping:"+a+" "+b);
     }
 }
+
+-------------------------ARRAY SWAP----------------------
+public class Solution{
+    public static void swapNumber(int [] a, int [] b) 
+    {
+        if (a.length == b.length) 
+        {
+            for (int i = 0; i < a.length; i++) 
+            {
+                int temp = a[i];
+                a[i] = b[i];
+                b[i] = temp;
+            }
+        }
+    }
+}
