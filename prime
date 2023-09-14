@@ -19,3 +19,24 @@ public class Prime {
         }
     }
 }
+-------------------ARRAYLIST---------------------
+import java.util.ArrayList;
+import java.math.*;
+
+public class Solution {
+    public static ArrayList<Integer> primeNumbersTillN(int N) {
+	int i,j;
+        ArrayList<Integer> primes = new ArrayList<>();
+        for ( i = 2; i <= N; i++) {
+            for (j = 2; j <= Math.sqrt(i); j++) {
+                if (i % j == 0) {
+                    break;
+                }
+            }
+            if (j>Math.sqrt(i)) {
+                primes.add(i);
+            }
+        }
+        return primes;
+    }
+}
