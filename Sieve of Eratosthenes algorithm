@@ -1,0 +1,32 @@
+To generate a list of prime numbers up to a given number N, you can complete the primeNumbersTillN method as follows using the Sieve of Eratosthenes algorithm:
+import java.util.ArrayList;
+
+public class Solution {
+    public static ArrayList<Integer> primeNumbersTillN(int N) {
+        boolean[] isPrime = new boolean[N + 1];
+        ArrayList<Integer> primes = new ArrayList<>();
+
+        // Initialize the isPrime array
+        for (int i = 2; i <= N; i++) {
+            isPrime[i] = true;
+        }
+
+        // Mark non-prime numbers using the Sieve of Eratosthenes algorithm
+        for (int p = 2; p * p <= N; p++) {
+            if (isPrime[p]) {
+                for (int i = p * p; i <= N; i += p) {
+                    isPrime[i] = false;
+                }
+            }
+        }
+
+        // Collect prime numbers into the 'primes' ArrayList
+        for (int i = 2; i <= N; i++) {
+            if (isPrime[i]) {
+                primes.add(i);
+            }
+        }
+
+        return primes;
+    }
+}
