@@ -1,0 +1,19 @@
+import java.io.*; 
+import java.util.ArrayList;
+
+public class Solution 
+{
+    public static void reverseArray(ArrayList<Integer> arr, int m)
+    {
+        // Write your code here.
+        int n = arr.size();
+        ArrayList<Integer> list = new ArrayList<>();
+
+            for(int i = m + 1; i < n; i++)
+            {
+                // list.add(arr.get(i));
+                Collections.swap(arr, i, n - 1);
+                n--;
+            }
+    }
+}
