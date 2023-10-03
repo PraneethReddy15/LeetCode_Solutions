@@ -1,0 +1,10 @@
+import java.util.ArrayList;
+import java.util.Collections;
+public class Solution {
+	public static ArrayList<Integer> rotateArray(ArrayList<Integer> arr, int k) {
+        // Write your code here.
+        int n = arr.size();
+         Collections.rotate(arr, n-k);
+    return arr;
+    }
+}
