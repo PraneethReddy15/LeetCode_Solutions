@@ -9,6 +9,7 @@ public class Solution{
             max= Math.min(max,prices.get(i));
             buy= Math.max(buy,prices.get(i)-max);
         }
+
         return buy;
     }
 }
