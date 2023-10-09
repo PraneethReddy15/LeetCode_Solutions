@@ -5,7 +5,6 @@ public class Solution {
     public static ArrayList<Integer> primeNumbersTillN(int N) {
         boolean[] isPrime = new boolean[N + 1];
         ArrayList<Integer> primes = new ArrayList<>();
-
         // Initialize the isPrime array
         for (int i = 2; i <= N; i++) {
             isPrime[i] = true;
