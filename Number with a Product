@@ -1,0 +1,37 @@
+Input 1:8
+output:18
+explanation 1*8=8
+
+Input:120
+output:358
+Explanaton : 3*5*8=120
+
+------------------------------------
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        long n = sc.nextLong();
+        for (long i = n+1; i < Long.MAX_VALUE; i++) {
+            if (result(n, i)) {
+                System.out.print(i + " ");
+                break;
+            }
+        }
+    }
+    static boolean result(long n, long num) {
+        if (num == 0) {
+            return false;
+        }
+        long pro = 1;
+        long temp = num;
+        while (temp > 0) {
+            long rem = temp % 10;
+            pro *= rem;
+            temp /= 10;
+        }
+        return pro == n;
+    }
+}
+
