@@ -4,10 +4,7 @@ class Solution {
         if(s.length()==1) return 1;
         for(int i=1;i<s.length();i++)
         {
-            char a=s.charAt(i-1);
-            char b=s.charAt(i);
-            System.out.println(a +" "+ b);
-            if(a==b)
+            if(s.charAt(i-1)==s.charAt(i))
             {
                 count++;
                 maxCount=Math.max(count,maxCount);
